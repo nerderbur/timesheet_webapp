@@ -1,0 +1,15 @@
+<div class="page">
+  <div class="form-card">
+    <div class="form-title">Timesheet Application</div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-body">
+          <input class="form-input" formControlName="email" [class.is-invalid]="!valid.email" type="email" placeholder="email">
+          <input formControlName="password" [class.is-invalid]="!valid.password" class="form-input" type="password" placeholder="password">
+      </div>
+      <div class="form-controls">
+        <button type="submit" class="login-btn">login</button>
+        <span class="no-acc-text">No account yet? <a href="/register" class="register-link">Register here!</a></span>
+      </div>
+    </form>
+  </div>
+</div>

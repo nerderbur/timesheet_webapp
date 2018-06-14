@@ -1,0 +1,97 @@
+.page {
+    background-color: #F2F2F2;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-card {
+    background-color: white;
+    width: 472px;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-title {
+    font-size: 30px;
+    margin: 0;
+    align-self: center;
+    margin-top: 80px;
+    color: #707070;
+    padding: 20px;
+}
+
+.form-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.form-input {
+    width: 298px;
+    height: 50px;
+    border: 1px solid #c3c3c3;
+    border-radius: 10px;
+    align-self: center;
+    padding-left: 20px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.form-input::placeholder {
+    font-weight: 100;
+    color: #ACACAC;
+}
+
+.form-input::value {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.form-controls {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px
+}
+
+.login-btn {
+    width: 226px;
+    height: 61px;
+    background-color: #1C8598;
+    color: white;
+    font-size: 30px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    align-self: center;
+}
+
+.no-acc-text {
+    color: #ACACAC;
+    font-weight: 100;
+    font-size: 20px;
+    margin-top: 10px;
+    align-self: center;
+}
+
+.register-link {
+    text-decoration: none;
+    color: #5087FF;
+}
+
+.register-link:visited {
+    color: #5087FF;
+}
+
+.is-invalid {
+    border: 1px solid red;
+}
+
+.is-invalid::placeholder {
+    color: red;
+}

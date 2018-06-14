@@ -1,0 +1,75 @@
+<div style="margin-top: 40px;">
+  <div class="container">
+      <div class="card">
+          <div class="card-body">
+              <h5 class="card-title">New Timesheet Entry</h5>
+              <form [formGroup]="addTimesheetForm" (ngSubmit)="onSubmit()">
+                <div class="form-row">
+                  <div class="col">
+                    <input 
+                      type="text" 
+                      class="form-control default-input" 
+                      formControlName="title"
+                      id="title"
+                      [class.is-invalid]="!valid.title"
+                      placeholder="title" name="title">
+                  </div>
+                  <div class="col">
+                    <select formControlName="client" name="client" [class.is-invalid]="!valid.client" class="custom-select default-input">
+                      <option selected>client...</option>
+                      <option *ngFor="let client of clients" [value]="client._id">{{client.name}}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row" style="margin-top: 20px">
+                    <div [class.is-invalid]="!valid.workType" class="col">
+                      <select formControlName="workType" name="workType" class="custom-select default-input">
+                        <option selected>type...</option>
+                        <option value="contract">Contract</option>
+                        <option value="overtime">Overtime</option>
+                      </select>
+                    </div>
+                  <div class="col">
+                    <input 
+                      type="date" 
+                      class="form-control default-input" 
+                      placeholder="date" 
+                      formControlName="date"
+                      [class.is-invalid]="!valid.date"
+                      name="date">
+                  </div>
+    
+                  <div class="col">
+                    <input 
+                      type="time" 
+                      class="form-control default-input" 
+                      [class.is-invalid]="!valid.startTime"
+                      formControlName="startTime"
+                      placeholder="start time" 
+                      name="startTime">
+                  </div>
+                  <div class="col">
+                    <input 
+                      type="time" 
+                      class="form-control default-input"
+                      [class.is-invalid]="!valid.endTime" 
+                      placeholder="end time" 
+                      formControlName="endTime"
+                      name="endTime">
+                  </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <textarea name="comments" class="form-control default-textarea" placeholder="comments" style="margin-top: 40px"></textarea>
+                    </div>
+                </div>
+              <div class="actions" style="margin-top: 40px;">
+                  <button class="add-btn btn" type="submit">Add</button>
+                  <button class="clear-btn btn" type="reset">Clear</button>
+                  <span class="number">{{duration.hours}}</span>h <span class="number">{{duration.minutes}}</span>mins
+              </div>
+            </form>
+          </div>
+      </div>
+  </div>
+</div>

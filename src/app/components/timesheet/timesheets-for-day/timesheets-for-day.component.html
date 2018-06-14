@@ -1,0 +1,24 @@
+<div class="container">
+    <h3 style="margin-top: 40px;">Timesheets submitted today.</h3>
+    <button (click)="addTimesheet()" class="view-btn btn">Add New</button>
+    <table style="margin-top: 40px;" class="table">
+      <thead>
+        <tr>
+          <th scope="col">#ID</th>
+          <th scope="col">Title</th>
+          <th scope="col">Date</th>
+          <th scope="col">Start Date</th>
+          <th scope="col">End Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let timesheet of timesheets">
+          <th scope="row">{{timesheet._id}}</th>
+          <td>{{timesheet.workTitle}}</td>
+          <td>{{timesheet.createdAt}}</td>
+          <td>{{timesheet.startTime}}</td>
+          <td>{{timesheet.endTime}}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>

@@ -1,0 +1,67 @@
+.card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    margin-top: 50px;
+    margin-bottom: 35px
+}
+
+.default-input {
+    border: 1px solid #c3c3c3;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 50px;
+}
+
+.default-textarea {
+    border: 1px solid #c3c3c3;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 200px;
+}
+
+.add-btn {
+    width: 226px;
+    height: 61px;
+    background-color: #1C8598;
+    color: white;
+    font-size: 30px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    align-self: center;
+    font-weight: 400;
+}
+
+.clear-btn {
+    width: 226px;
+    height: 61px;
+    background-color: #FF9696;
+    color: white;
+    font-size: 30px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    align-self: center;
+    font-weight: 400;
+}
+
+.actions {
+    font-size: 35px;
+    color: #ACACAC;
+    font-weight: 100;
+}
+
+.number {
+    color: #ACACAC;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.is-invalid {
+    border: 1px solid red;
+}
+
+.is-invalid::placeholder {
+    color: red;
+}
