@@ -6,6 +6,7 @@ export const environment = {
     postTimesheet: '/timesheet',
     login: '/login',
     register: '/register',
-    timesheets: '/timesheets'
+    timesheets: '/timesheets',
+    profile: '/me'
   }
 };

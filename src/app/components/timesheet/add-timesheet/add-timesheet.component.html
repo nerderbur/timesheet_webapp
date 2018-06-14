@@ -3,6 +3,7 @@
       <div class="card">
           <div class="card-body">
               <h5 class="card-title">New Timesheet Entry</h5>
+              <span class="manager-name">Manager: {{manager.name}}, </span><span class="manager-pos">{{manager.position}}</span>
               <form [formGroup]="addTimesheetForm" (ngSubmit)="onSubmit()">
                 <div class="form-row">
                   <div class="col">

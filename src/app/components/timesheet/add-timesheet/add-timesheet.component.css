@@ -58,6 +58,18 @@
     font-weight: 600;
 }
 
+.manager-pos {
+    font-size: 15px;
+    color: #ACACAC;
+    font-weight: 100;
+}
+
+.manager-name {
+    color: #ACACAC;
+    font-size: 15px;
+    font-weight: 600;
+}
+
 .is-invalid {
     border: 1px solid red;
 }

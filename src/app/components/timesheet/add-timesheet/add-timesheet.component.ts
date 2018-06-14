@@ -25,6 +25,10 @@ export class AddTimesheetComponent implements OnInit {
     client: true
   };
   clients = [{_id: 'null', name: 'getting clients...'}];
+  manager = {
+    name: "",
+    position: ""
+  }
 
   constructor() { }
 
@@ -45,6 +49,17 @@ export class AddTimesheetComponent implements OnInit {
         hours: duration['_data']['hours'],
         minutes: duration['_data']['minutes']
       };
+    })
+    this.getManager();
+  }
+
+  getManager() {
+    axios.get(`${environment.api.baseUrl}${environment.api.profile}`, {
+      headers: {'x-auth': localStorage.getItem('token')}
+    }).then((resp) => {
+      this.manager = resp.data.manager
+    }).catch(() => {
+      alert('There was an error getting your profile info!')
     })
   }
 
