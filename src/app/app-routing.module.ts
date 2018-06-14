@@ -7,6 +7,7 @@ import { MainGuard } from './guards/main.guard';
 import { TimesheetsForDayComponent } from './components/timesheet/timesheets-for-day/timesheets-for-day.component';
 
 const routes: Routes = [
+  { path: '', component: DashboardComponent, canActivate: [MainGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [MainGuard] },

@@ -35,9 +35,14 @@ export class LoginComponent implements OnInit {
     let formData = this.loginForm.value
     axios.post(`${environment.api.baseUrl}${environment.api.login}`, formData).then((resp) => {
       console.log(resp)
-      localStorage.setItem('token', resp.data.data)
-      this.router.navigate(['dashboard'])
+      if (resp.data.data != undefined) {
+        localStorage.setItem('token', resp.data.data)
+        this.router.navigate(['dashboard'])
+      } else {
+        alert('Incorrect username or password.')
+      }
     }).catch((err) => {
+      alert('There was a problem logging you in.')
       console.log(err);
     })
   }
