@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
   api: {
-    baseUrl: 'http://104.131.24.34:8000',
+    baseUrl: 'https://timesheet-api-demo.herokuapp.com',
     getClients: '/clients',
     postTimesheet: '/timesheet',
     login: '/login',
